@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://rev-a-shelf.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://rev-a-shelf.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://rev-a-shelf.com/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/EDITranslatorServiceLib/?xsd=xsd0" namespace="http://rev-a-shelf.com" />
+      <xsd:import schemaLocation="http://localhost:8080/EDITranslatorServiceLib/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/EDITranslatorServiceLib/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EDITranslatorServiceLib" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITranslator_GetEDIDocFromJSON_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEDIDocFromJSON" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetEDIDocFromJSON_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEDIDocFromJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetEDIDocFromXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEDIDocFromXML" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetEDIDocFromXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEDIDocFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetJSONFromEDIDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSONFromEDIDoc" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetJSONFromEDIDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSONFromEDIDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetXMLFromEDIDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXMLFromEDIDoc" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetXMLFromEDIDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXMLFromEDIDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ITranslator_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITranslator">
+    <wsdl:operation name="GetEDIDocFromJSON">
+      <wsdl:input wsaw:Action="http://rev-a-shelf.com/ITranslator/GetEDIDocFromJSON" message="tns:ITranslator_GetEDIDocFromJSON_InputMessage" />
+      <wsdl:output wsaw:Action="http://rev-a-shelf.com/ITranslator/GetEDIDocFromJSONResponse" message="tns:ITranslator_GetEDIDocFromJSON_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEDIDocFromXML">
+      <wsdl:input wsaw:Action="http://rev-a-shelf.com/ITranslator/GetEDIDocFromXML" message="tns:ITranslator_GetEDIDocFromXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://rev-a-shelf.com/ITranslator/GetEDIDocFromXMLResponse" message="tns:ITranslator_GetEDIDocFromXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSONFromEDIDoc">
+      <wsdl:input wsaw:Action="http://rev-a-shelf.com/ITranslator/GetJSONFromEDIDoc" message="tns:ITranslator_GetJSONFromEDIDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://rev-a-shelf.com/ITranslator/GetJSONFromEDIDocResponse" message="tns:ITranslator_GetJSONFromEDIDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXMLFromEDIDoc">
+      <wsdl:input wsaw:Action="http://rev-a-shelf.com/ITranslator/GetXMLFromEDIDoc" message="tns:ITranslator_GetXMLFromEDIDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://rev-a-shelf.com/ITranslator/GetXMLFromEDIDocResponse" message="tns:ITranslator_GetXMLFromEDIDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://rev-a-shelf.com/ITranslator/GetDataUsingDataContract" message="tns:ITranslator_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://rev-a-shelf.com/ITranslator/GetDataUsingDataContractResponse" message="tns:ITranslator_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

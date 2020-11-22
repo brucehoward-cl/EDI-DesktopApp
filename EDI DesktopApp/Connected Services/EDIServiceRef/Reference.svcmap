@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c51a6440-69b9-40df-9658-c5a4a7e2f7ab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/EDITranslatorServiceLib/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EDITranslatorService.wsdl" MetadataType="Wsdl" ID="472dcf91-a821-4d29-b030-f919a4b89794" SourceId="1" SourceUrl="http://localhost:8080/EDITranslatorServiceLib/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="2ea6a698-b6dc-4b03-a07e-f4c2ba4f5f9a" SourceId="1" SourceUrl="http://localhost:8080/EDITranslatorServiceLib/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="42150563-bf73-4f9b-bded-862a75d45157" SourceId="1" SourceUrl="http://localhost:8080/EDITranslatorServiceLib/?xsd=xsd0" />
+    <MetadataFile FileName="item.wsdl" MetadataType="Wsdl" ID="5f3cec4f-196e-4060-a90d-17fe239edea9" SourceId="1" SourceUrl="http://localhost:8080/EDITranslatorServiceLib/?wsdl=wsdl0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="5ab792cd-6f6d-4829-aa45-e423240bc7e3" SourceId="1" SourceUrl="http://localhost:8080/EDITranslatorServiceLib/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="ce2b7c1c-d85e-436a-a178-4c8011fa0b93" SourceId="1" SourceUrl="http://localhost:8080/EDITranslatorServiceLib/?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
